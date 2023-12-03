@@ -1,0 +1,1 @@
+CLI Tool for File Manipulation (Batch Renamer & Encrypter/Decrypter)
