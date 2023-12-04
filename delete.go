@@ -1,5 +1,5 @@
 package main
 
-func delete() {
+func delete(fileNames []string) {
 
 }
