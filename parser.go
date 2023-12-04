@@ -1,25 +1,13 @@
 package main
 
 import (
-	"flag"
-	"fmt"
 	"os"
 )
 
-func parser() ([]string, error) {
-	// Define command-line flags
-	directory := flag.String("dir", ".", "Look in the directory")
-	pattern := flag.String("pattern", "", "Pattern for renaming")
-
-	// Parse the flags
-	flag.Parse()
-
-	// Print the values of the flags
-	fmt.Println("Directory:", *directory)
-	fmt.Println("Pattern:", *pattern)
+func parser(directoryPath string) ([]string, error) {
 
 	// Read the directory specified by the user
-	files, err := os.ReadDir(*directory)
+	files, err := os.ReadDir(*&directoryPath)
 	if err != nil {
 		return nil, err // Return an error if unable to read the directory
 	}
