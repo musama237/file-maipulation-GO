@@ -1,11 +1,20 @@
 package main
 
 import (
+	"bufio"
 	"fmt"
 	"log"
+	"os"
+	"strings"
 )
 
 func main() {
+
+	reader := bufio.NewReader(os.Stdin)
+	fmt.Println("Please enter the path to the directory you want to work with:")
+	directoryPath, _ := reader.ReadString('\n')
+	directoryPath = strings.TrimSpace(directoryPath) // Remove newline character
+
 	fmt.Println("Enter choice")
 	fmt.Println("1 for list Directories")
 	fmt.Println("2 for rename")
@@ -23,7 +32,7 @@ func main() {
 
 	switch choice {
 	case 1:
-		fileNames, err = parser() // Call the parser function
+		fileNames, err = parser(directoryPath) // Call the parser function
 		if err != nil {
 			log.Fatal(err)
 		}
@@ -35,7 +44,7 @@ func main() {
 		}
 
 	case 2:
-		fileNames, err = parser() // Call the parser function
+		fileNames, err = parser(directoryPath) // Call the parser function
 		if err != nil {
 			log.Fatal(err)
 		}
@@ -52,7 +61,7 @@ func main() {
 		}
 
 	case 3:
-		fileNames, err = parser() // Call the parser function
+		fileNames, err = parser(directoryPath) // Call the parser function
 		if err != nil {
 			log.Fatal(err)
 		}
@@ -64,7 +73,7 @@ func main() {
 		}
 
 	case 4:
-		fileNames, err = parser() // Call the parser function
+		fileNames, err = parser(directoryPath) // Call the parser function
 		if err != nil {
 			log.Fatal(err)
 		}
@@ -76,7 +85,7 @@ func main() {
 		}
 
 	case 5:
-		fileNames, err = parser() // Call the parser function
+		fileNames, err = parser(directoryPath) // Call the parser function
 		if err != nil {
 			log.Fatal(err)
 		}
