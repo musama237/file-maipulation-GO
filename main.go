@@ -51,7 +51,41 @@ func main() {
 			rename(fileNames)
 		}
 
-	// Implement other cases here...
+	case 3:
+		fileNames, err = parser() // Call the parser function
+		if err != nil {
+			log.Fatal(err)
+		}
+
+		// Print the list of file names
+		fmt.Println("Files in the directory:")
+		for _, name := range fileNames {
+			fmt.Println(name)
+		}
+
+	case 4:
+		fileNames, err = parser() // Call the parser function
+		if err != nil {
+			log.Fatal(err)
+		}
+
+		// Print the list of file names
+		fmt.Println("Files in the directory:")
+		for _, name := range fileNames {
+			fmt.Println(name)
+		}
+
+	case 5:
+		fileNames, err = parser() // Call the parser function
+		if err != nil {
+			log.Fatal(err)
+		}
+
+		// Print the list of file names
+		fmt.Println("Files in the directory:")
+		for _, name := range fileNames {
+			fmt.Println(name)
+		}
 
 	case 6:
 		fmt.Println("Exiting...")
