@@ -71,30 +71,35 @@ func main() {
 		for _, name := range fileNames {
 			fmt.Println(name)
 		}
-
-	case 4:
-		fileNames, err = parser(directoryPath) // Call the parser function
-		if err != nil {
-			log.Fatal(err)
+		if fileNames == nil {
+			fmt.Println("Please list the directories first (Option 1)")
+		} else {
+			move(fileNames, directoryPath)
 		}
 
-		// Print the list of file names
-		fmt.Println("Files in the directory:")
-		for _, name := range fileNames {
-			fmt.Println(name)
-		}
+	// case 4:
+	// 	fileNames, err = parser(directoryPath) // Call the parser function
+	// 	if err != nil {
+	// 		log.Fatal(err)
+	// 	}
 
-	case 5:
-		fileNames, err = parser(directoryPath) // Call the parser function
-		if err != nil {
-			log.Fatal(err)
-		}
+	// 	// Print the list of file names
+	// 	fmt.Println("Files in the directory:")
+	// 	for _, name := range fileNames {
+	// 		fmt.Println(name)
+	// 	}
 
-		// Print the list of file names
-		fmt.Println("Files in the directory:")
-		for _, name := range fileNames {
-			fmt.Println(name)
-		}
+	// case 5:
+	// 	fileNames, err = parser(directoryPath) // Call the parser function
+	// 	if err != nil {
+	// 		log.Fatal(err)
+	// 	}
+
+	// 	// Print the list of file names
+	// 	fmt.Println("Files in the directory:")
+	// 	for _, name := range fileNames {
+	// 		fmt.Println(name)
+	// 	}
 
 	case 6:
 		fmt.Println("Exiting...")
