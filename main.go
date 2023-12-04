@@ -77,17 +77,8 @@ func main() {
 			move(fileNames, directoryPath)
 		}
 
-	// case 4:
-	// 	fileNames, err = parser(directoryPath) // Call the parser function
-	// 	if err != nil {
-	// 		log.Fatal(err)
-	// 	}
-
-	// 	// Print the list of file names
-	// 	fmt.Println("Files in the directory:")
-	// 	for _, name := range fileNames {
-	// 		fmt.Println(name)
-	// 	}
+	case 4:
+		new_file(directoryPath)
 
 	// case 5:
 	// 	fileNames, err = parser(directoryPath) // Call the parser function
@@ -108,4 +99,5 @@ func main() {
 	default:
 		fmt.Println("Invalid option, please try again.")
 	}
+
 }
