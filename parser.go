@@ -7,7 +7,7 @@ import (
 func parser(directoryPath string) ([]string, error) {
 
 	// Read the directory specified by the user
-	files, err := os.ReadDir(*&directoryPath)
+	files, err := os.ReadDir(directoryPath)
 	if err != nil {
 		return nil, err // Return an error if unable to read the directory
 	}
