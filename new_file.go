@@ -25,5 +25,5 @@ func new_file(directoryPath string) {
 		return
 
 	}
-	file.Close()
+	defer file.Close()
 }
